@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Registration</string>
+    <string name="finish">Finish</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="register">Register</string>
+    <string name="Country">Country</string>
+    <string name="countries">Countries</string>
+
+    <string-array name="countries">
+        <item>Country</item>
+        <item>Palestine</item>
+        <item>Jordan</item>
+        <item>US</item>
+        <item>UK</item>
+        <item>Germany</item>
+        <item>Italy</item>
+        <item>Australia</item>
+        <item>Pakistan</item>
+        <item>India</item>
+        <item>Syria</item>
+        <item>Lebanon</item>
+
+    </string-array>
+</resources>
