@@ -8,19 +8,23 @@ import android.widget.TextView;
 
 public class DisplayData extends AppCompatActivity {
     TextView FullName;
+    TextView Email;
     TextView Username;
-    TextView Gender;
     TextView Country;
+    TextView Gender;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_data);
-        FullName = (TextView)findViewById(R.id.full_name);
-        Username = (TextView)findViewById(R.id.username);
-//        Gender = (TextView)findViewById(R.id.gender);
-//        Country = (TextView)findViewById(R.id.country);
+        FullName = (TextView)findViewById(R.id.full_name_display);
+        Email = (TextView)findViewById(R.id.email_display);
+        Username = (TextView)findViewById(R.id.username_display);
+        Country = (TextView)findViewById(R.id.country_display);
+        Gender = (TextView)findViewById(R.id.gender_display);
+
+
 
 
 
@@ -28,9 +32,16 @@ public class DisplayData extends AppCompatActivity {
 
         String FN =  intent.getStringExtra("full_name");
         String UM =  intent.getStringExtra("username");
-        FullName.setText(FN);
+        String email =  intent.getStringExtra("email");
+        String country =  intent.getStringExtra("country");
+        String gender =  intent.getStringExtra("gender");
 
+        FullName.setText(FN);
+        Email.setText(email);
         Username.setText(UM);
+        Country.setText(country);
+        Gender.setText(gender);
+
 
 //        Gender.setText(intent.getStringExtra("Gender"));
 //

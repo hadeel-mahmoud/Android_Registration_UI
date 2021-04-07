@@ -11,6 +11,12 @@
     <string name="register">Register</string>
     <string name="Country">Country</string>
     <string name="countries">Countries</string>
+    <string name="full_name_label">Full Name:</string>
+    <string name="email_label">Email:</string>
+    <string name="username_label">Username:</string>
+    <string name="password_label">Password:</string>
+    <string name="country_label">Country:</string>
+    <string name="gender_label">Gender:</string>
 
     <string-array name="countries">
         <item>Country</item>

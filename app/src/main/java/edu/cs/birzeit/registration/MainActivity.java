@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     Button Finish;
     EditText FullName;
+    EditText Email;
     EditText Username;
     EditText Password;
     RadioButton MaleRB;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         FullName = (EditText) findViewById(R.id.full_name);
+        Email = (EditText) findViewById(R.id.email);
         Username = (EditText) findViewById(R.id.username);
         Password = (EditText) findViewById(R.id.password);
         MaleRB = (RadioButton) findViewById(R.id.rb_male);
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 displayDataIntent.putExtra("full_name", FullName.getText().toString());
                 displayDataIntent.putExtra("username", Username.getText().toString());
                 displayDataIntent.putExtra("password", Password.getText().toString());
+                displayDataIntent.putExtra("email", Email.getText().toString());
+
 
                 if (MaleRB.isChecked()) {
                     displayDataIntent.putExtra("gender", MaleRB.getText().toString());
@@ -66,11 +70,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 } else if (FemaleRB.isChecked()) {
                     displayDataIntent.putExtra("gender", FemaleRB.getText().toString());
                 }
-
                 displayDataIntent.putExtra("country", SpinnerValue);
 
+                if (MaleRB.isChecked() && FemaleRB.isChecked()) {
+                    Toast.makeText(getApplicationContext(), "Please select only once choice", Toast.LENGTH_SHORT).show();}
+                else
+                    if (FullName.getText().toString().trim().length() != 0 && Username.getText().toString().trim().length() != 0 && Password.getText().toString().trim().length() != 0 && Email.getText().toString().trim().length() != 0 && (FemaleRB.isChecked() || MaleRB.isChecked())) {
+                        startActivity(displayDataIntent);
 
-                startActivity(displayDataIntent);
+
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
         });
 
